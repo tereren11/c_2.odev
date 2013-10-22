@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{	
+	int sayi;                                   //sayi adında int deger tanımlandı
+	printf("4 basamakli bir sayi giriniz:");  //kullanıcıdan 4 basamakli sayı istendi
+	scanf("%d",&sayi);                          
+	printf("cozumlenecek sayi=%d\n",sayi);
+	int birler,onlar,yuzler,binler;
+	if(sayi<10000)                          //sayı 4 basamaklıysa islemler devam edecek dongulere girecek
+	{	
+		birler=sayi%10;                         //modda kalan sayılar belirleniyor 
+		onlar=(sayi%100-sayi%10)/10;
+		yuzler=(sayi%1000-sayi%100)/100;
+		binler=(sayi%10000-sayi%1000)/1000;
+		printf("birler basamagi=%d\n",birler);
+		printf("onlar basamagi=%d\n",onlar);
+		printf("yuzler basamagi=%d\n",yuzler);
+		printf("binler basamagi=%d\n",binler);
+	}
+	else                                    //girilen sayı 4 basamaklı degilse hata mesajı veriliyor
+		printf("4 basamakli bir sayi giriniz!!!");
+
+}
